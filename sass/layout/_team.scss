@@ -1,0 +1,71 @@
+/* Секция Наша команда*/
+.team {
+  margin-left: auto;
+  margin-right: auto;
+  background: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+.team-list > li {
+  width: 270px;
+  height: 422px;
+  background: $white-color;
+}
+.team-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-top: 30px;
+}
+.team-career {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $subtext-color;
+  text-align: center;
+  margin-top: 10px;
+}
+.team-social-links {
+  @extend %social-link-set;
+  margin-top: 16px;
+}
+.team-social-links-items {
+  @extend %social-link;
+  background-color: $white-color;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover svg,
+  &:focus svg {
+    fill: $white-color;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.team-social {
+  @extend %social-link-svg;
+  fill: #afb1b8;
+}
+.team-list-cards {
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}

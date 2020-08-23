@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-color: $white-color;
+  font-family: $main-font;
+  font-size: 14px;
+  color: $secondary-color;
+}
+.link {
+  text-decoration: none;
+}
+h1 {
+  margin: 0;
+}
+
+.img {
+  display: block;
+}

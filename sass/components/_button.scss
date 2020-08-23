@@ -1,0 +1,26 @@
+/* кнопка в секции герои */
+.button {
+  background-color: $accent-color;
+  color: $white-color;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+
+  /* ховер на кнопке-герое */
+  &:hover,
+  &:focus {
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

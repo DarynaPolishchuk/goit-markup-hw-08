@@ -1,0 +1,34 @@
+/*Секция наши приемущества*/
+.advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.advantages-caption {
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.advantages-text {
+  font-family: $main-font;
+  font-weight: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $subtext-color;
+}
+.advantage-list {
+  display: flex;
+  justify-content: space-between;
+}
+.advantage-list-items:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon {
+  background-color: #f5f4fa;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
