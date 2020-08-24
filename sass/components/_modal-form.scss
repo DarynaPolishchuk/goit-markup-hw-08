@@ -1,308 +1,308 @@
-/* МОДАЛЬНОЕ ОКНО */
-/* Подложка под модального окна(фон) */
-.backdrop {
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transform: translateY(0);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+// /* МОДАЛЬНОЕ ОКНО */
+// /* Подложка под модального окна(фон) */
+// .backdrop {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   transform: translateY(0);
+//   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
 
-/* описание формы модального окна */
-.modal-form {
-  width: 528px;
-  height: 581px;
-  display: flex;
-  flex-direction: column;
-  background-color: $white-color;
-  padding: 40px;
-  position: relative;
-  border-radius: 4px;
-  &:focus {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
-}
+// /* описание формы модального окна */
+// .modal-form {
+//   width: 528px;
+//   height: 581px;
+//   display: flex;
+//   flex-direction: column;
+//   background-color: $white-color;
+//   padding: 40px;
+//   position: relative;
+//   border-radius: 4px;
+//   &:focus {
+//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//       0px 2px 1px rgba(0, 0, 0, 0.2);
+//   }
+// }
 
-/* Стилизация заголовка формы */
-.modal-form-title {
-  margin-bottom: 30px;
-}
-.modal-form-conect {
-  position: relative;
-}
-/* ИНПУТЫ */
-/* Общая стилизация инпутов */
-.modal-form-input {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 28px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-left: 42px;
-  cursor: pointer;
+// /* Стилизация заголовка формы */
+// .modal-form-title {
+//   margin-bottom: 30px;
+// }
+// .modal-form-conect {
+//   position: relative;
+// }
+// /* ИНПУТЫ */
+// /* Общая стилизация инпутов */
+// .modal-form-input {
+//   width: 100%;
+//   height: 40px;
+//   margin-bottom: 28px;
+//   border: 1px solid rgba(33, 33, 33, 0.2);
+//   border-radius: 4px;
+//   padding-left: 42px;
+//   cursor: pointer;
 
-  /* Смена цвета бордера у инпутов при фокусе */
-  &:focus {
-    outline: none;
-    padding-left: 42px;
-    border: 1px solid #2196f3;
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-  }
-}
+//   /* Смена цвета бордера у инпутов при фокусе */
+//   &:focus {
+//     outline: none;
+//     padding-left: 42px;
+//     border: 1px solid #2196f3;
+//     transition-property: transform;
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//     cursor: pointer;
+//   }
+// }
 
-/*ЛЕЙБЛЫ */
-/* позиционирвание ЛЕЙБЛОВ в инпуте */
-.modal-form-label {
-  position: absolute;
-  top: 31%;
-  left: 40px;
-  font-family: $main-font;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  color: $subtext-color;
-  transform: translateY(-50%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
+// /*ЛЕЙБЛЫ */
+// /* позиционирвание ЛЕЙБЛОВ в инпуте */
+// .modal-form-label {
+//   position: absolute;
+//   top: 31%;
+//   left: 40px;
+//   font-family: $main-font;
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 16px;
+//   letter-spacing: 0.01em;
+//   color: $subtext-color;
+//   transform: translateY(-50%);
+//   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   cursor: pointer;
+// }
 
-/* ВЫЕЗД И ОСТАНОВКА ЛЕЙБЛА ВВЕРХУ ИНПУТА */
-/* Выбрать .modal-form-label который идет сразу после 
-modal-form-input когда у того не показывается плейсхолдер*/
-.modal-form-input:focus + .modal-form-label,
-.modal-form-input:not(:placeholder-shown) + .modal-form-label {
-  color: $accent-color;
-  transform: translate(-22px, -40px);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 1.17;
-}
+// /* ВЫЕЗД И ОСТАНОВКА ЛЕЙБЛА ВВЕРХУ ИНПУТА */
+// /* Выбрать .modal-form-label который идет сразу после
+// modal-form-input когда у того не показывается плейсхолдер*/
+// .modal-form-input:focus + .modal-form-label,
+// .modal-form-input:not(:placeholder-shown) + .modal-form-label {
+//   color: $accent-color;
+//   transform: translate(-22px, -40px);
+//   transition-property: transform;
+//   transition-duration: 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//   cursor: pointer;
+//   font-size: 12px;
+//   line-height: 1.17;
+// }
 
-/* ИКОНКИ */
-/* Замена цвета иконок при фокусе */
-.modal-form-input:focus ~ .icon-form {
-  fill: $accent-color;
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-/* для иконки ИМЯ,ТЕЛЕФОН,МЕЙЛ */
-.icon-form-name {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  /* border: 1px solid #212121; */
-  top: 21%;
-  left: 22px;
-  transform: translateX(-35%);
-}
+// /* ИКОНКИ */
+// /* Замена цвета иконок при фокусе */
+// .modal-form-input:focus ~ .icon-form {
+//   fill: $accent-color;
+//   transition-property: transform;
+//   transition-duration: 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//   cursor: pointer;
+// }
+// /* для иконки ИМЯ,ТЕЛЕФОН,МЕЙЛ */
+// .icon-form-name {
+//   position: absolute;
+//   width: 12px;
+//   height: 12px;
+//   /* border: 1px solid #212121; */
+//   top: 21%;
+//   left: 22px;
+//   transform: translateX(-35%);
+// }
 
-.icon-form-phone {
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  /* border: 1px solid #212121; */
-  top: 21%;
-  left: 22px;
-  transform: translateX(-35%);
-}
+// .icon-form-phone {
+//   position: absolute;
+//   width: 13px;
+//   height: 13px;
+//   /* border: 1px solid #212121; */
+//   top: 21%;
+//   left: 22px;
+//   transform: translateX(-35%);
+// }
 
-.icon-form-mail {
-  position: absolute;
-  width: 15px;
-  height: 12px;
-  /* border: 1px solid #212121; */
-  top: 21%;
-  left: 22px;
-  transform: translateX(-35%);
-}
+// .icon-form-mail {
+//   position: absolute;
+//   width: 15px;
+//   height: 12px;
+//   /* border: 1px solid #212121; */
+//   top: 21%;
+//   left: 22px;
+//   transform: translateX(-35%);
+// }
 
-/* стилизация плейсхолдера в модал меседж */
-.modal-message::placeholder {
-  padding: 12px 16px;
-}
+// /* стилизация плейсхолдера в модал меседж */
+// .modal-message::placeholder {
+//   padding: 12px 16px;
+// }
 
-/* Стилизация соглашения на рассылку */
-.modal-form-optional-label {
-  margin-bottom: 30px;
-}
+// /* Стилизация соглашения на рассылку */
+// .modal-form-optional-label {
+//   margin-bottom: 30px;
+// }
 
-/* Стилизация кнопки на форме */
-.modal-form-btn {
-  transform: translateX(60%);
-}
-/* ТЕКСТ АРЕА */
-/* Позиционирование Лейбла в текстареа */
-.modal-form-label-textarea {
-  position: absolute;
-  top: 53%;
-  left: 11%;
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: $subtext-color;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    font-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    line-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* выезд лейбла ТЕКСТАРЕА */
+// /* Стилизация кнопки на форме */
+// .modal-form-btn {
+//   transform: translateX(60%);
+// }
+// /* ТЕКСТ АРЕА */
+// /* Позиционирование Лейбла в текстареа */
+// .modal-form-label-textarea {
+//   position: absolute;
+//   top: 53%;
+//   left: 11%;
+//   font-family: $main-font;
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 24px;
+//   letter-spacing: 0.03em;
+//   color: $subtext-color;
+//   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     font-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     line-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+// /* выезд лейбла ТЕКСТАРЕА */
 
-.modal-message:focus + .modal-form-label-textarea,
-.modal-message:not(:placeholder-shown) + .modal-form-label-textarea {
-  color: $accent-color;
-  cursor: pointer;
-  font-size: 12px;
-  transform: translate(-10px, -30px);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+// .modal-message:focus + .modal-form-label-textarea,
+// .modal-message:not(:placeholder-shown) + .modal-form-label-textarea {
+//   color: $accent-color;
+//   cursor: pointer;
+//   font-size: 12px;
+//   transform: translate(-10px, -30px);
+//   transition-property: transform;
+//   transition-duration: 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// }
 
-/* Стилизация rextarea */
-.modal-message {
-  width: 100%;
-  height: 120px;
-  resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  margin-bottom: 20px;
-  outline: none;
-  cursor: pointer;
+// /* Стилизация rextarea */
+// .modal-message {
+//   width: 100%;
+//   height: 120px;
+//   resize: none;
+//   border: 1px solid rgba(33, 33, 33, 0.2);
+//   border-radius: 4px;
+//   margin-bottom: 20px;
+//   outline: none;
+//   cursor: pointer;
 
-  /* TEXTAREA при фокусе
- (смена бордера и позиционирование коментария)*/
-  &:focus {
-    border: 1px solid #2196f3;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 5px;
-  }
-}
+//   /* TEXTAREA при фокусе
+//  (смена бордера и позиционирование коментария)*/
+//   &:focus {
+//     border: 1px solid #2196f3;
+//     padding-top: 5px;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     padding-bottom: 5px;
+//   }
+// }
 
-/* СТИЛИЗАЦИЯ ЧЕКБОКСА */
-/* Спрятать старый из Репозитория САШИ*/
-.modal-form-checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.modal-checkbox-field {
-  margin-bottom: 30px;
-}
-.modal-form-optional-label-checkbox {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+// /* СТИЛИЗАЦИЯ ЧЕКБОКСА */
+// /* Спрятать старый из Репозитория САШИ*/
+// .modal-form-checkbox {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
+// .modal-checkbox-field {
+//   margin-bottom: 30px;
+// }
+// .modal-form-optional-label-checkbox {
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 30px;
 
-  font-size: 14px;
-  line-height: 0.88;
-  letter-spacing: 0.01em;
+//   font-size: 14px;
+//   line-height: 0.88;
+//   letter-spacing: 0.01em;
 
-  color: $secondary-color;
-}
-.modal-form-custom-checkbox {
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  background-color: $white-color;
-  color: $white-color;
-  border: solid #afb1b8 1px;
-  border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
+//   color: $secondary-color;
+// }
+// .modal-form-custom-checkbox {
+//   position: absolute;
+//   width: 16px;
+//   height: 15px;
+//   background-color: $white-color;
+//   color: $white-color;
+//   border: solid #afb1b8 1px;
+//   border-radius: 4px;
+//   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   cursor: pointer;
+// }
 
-.icon-check-modal {
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  fill: $white-color;
-}
-.modal-form-checkbox:checked + .modal-form-custom-checkbox {
-  background-color: $accent-color;
-}
+// .icon-check-modal {
+//   position: absolute;
+//   top: 1px;
+//   left: 2px;
+//   fill: $white-color;
+// }
+// .modal-form-checkbox:checked + .modal-form-custom-checkbox {
+//   background-color: $accent-color;
+// }
 
-/* Стилизация текста чекбокса */
-.modal-form-option-span {
-  font-size: 14px;
-  line-height: 0.88;
-  letter-spacing: 0.03em;
-  font-family: $main-font;
-  font-weight: 400;
-  color: $subtext-color;
-  margin-left: 25px;
-  cursor: pointer;
-  & > a {
-    color: $accent-color;
-  }
-}
+// /* Стилизация текста чекбокса */
+// .modal-form-option-span {
+//   font-size: 14px;
+//   line-height: 0.88;
+//   letter-spacing: 0.03em;
+//   font-family: $main-font;
+//   font-weight: 400;
+//   color: $subtext-color;
+//   margin-left: 25px;
+//   cursor: pointer;
+//   & > a {
+//     color: $accent-color;
+//   }
+// }
 
-.modal-form-btn:hover,
-.modal-form-btn:focus {
-  background: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
+// .modal-form-btn:hover,
+// .modal-form-btn:focus {
+//   background: #188ce8;
+//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//   transition-property: box-shadow;
+//   transition-duration: 250ms;
+//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//   cursor: pointer;
+// }
 
-/* Кнопка для закрытия модальног окна */
-.modal-close-btn {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 8px;
-  right: 8px;
-  cursor: pointer;
-  background: $white-color;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  outline: none;
-  fill: $subtext-color;
+// /* Кнопка для закрытия модальног окна */
+// .modal-close-btn {
+//   position: absolute;
+//   width: 30px;
+//   height: 30px;
+//   top: 8px;
+//   right: 8px;
+//   cursor: pointer;
+//   background: $white-color;
+//   border: 1px solid rgba(0, 0, 0, 0.1);
+//   border-radius: 50%;
+//   outline: none;
+//   fill: $subtext-color;
 
-  /* Фокус на кнопку закрытия */
-  &:focus,
-  &:hover {
-    fill: $accent-color;
-  }
-}
-/* Кнопка закрытия */
-.modal-close-btn-svg {
-  width: 11px;
-  height: 11px;
-}
+//   /* Фокус на кнопку закрытия */
+//   &:focus,
+//   &:hover {
+//     fill: $accent-color;
+//   }
+// }
+// /* Кнопка закрытия */
+// .modal-close-btn-svg {
+//   width: 11px;
+//   height: 11px;
+// }
 
-/* что бы спрятать модальное окно */
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+// /* что бы спрятать модальное окно */
+// .is-hidden {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
