@@ -465,6 +465,333 @@ h1 {
   transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(0);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+}
+
+/* описание формы модального окна */
+.modal-form {
+  width: 450px;
+  height: 609px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 40px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.modal-form:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилизация заголовка формы */
+.modal-form-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.modal-form-conect {
+  position: relative;
+}
+
+/* ИНПУТЫ */
+/* Общая стилизация инпутов */
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  cursor: pointer;
+  /* Смена цвета бордера у инпутов при фокусе */
+}
+
+.modal-form-input:focus {
+  outline: none;
+  padding-left: 42px;
+  border: 1px solid #2196f3;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/*ЛЕЙБЛЫ */
+/* позиционирвание ЛЕЙБЛОВ в инпуте */
+.modal-form-label {
+  position: absolute;
+  top: 31%;
+  left: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* ВЫЕЗД И ОСТАНОВКА ЛЕЙБЛА ВВЕРХУ ИНПУТА */
+/* Выбрать .modal-form-label который идет сразу после
+modal-form-input когда у того не показывается плейсхолдер*/
+.modal-form-input:focus + .modal-form-label,
+.modal-form-input:not(:placeholder-shown) + .modal-form-label {
+  color: #2196f3;
+  transform: translate(-22px, -40px);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+/* ИКОНКИ */
+/* Замена цвета иконок при фокусе */
+.modal-form-input:focus ~ .icon-form {
+  fill: #2196f3;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* для иконки ИМЯ,ТЕЛЕФОН,МЕЙЛ */
+.icon-form-name {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  /* border: 1px solid #212121; */
+  top: 21%;
+  left: 22px;
+  transform: translateX(-35%);
+}
+
+.icon-form-phone {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  /* border: 1px solid #212121; */
+  top: 21%;
+  left: 22px;
+  transform: translateX(-35%);
+}
+
+.icon-form-mail {
+  position: absolute;
+  width: 15px;
+  height: 12px;
+  /* border: 1px solid #212121; */
+  top: 21%;
+  left: 22px;
+  transform: translateX(-35%);
+}
+
+/* стилизация плейсхолдера в модал меседж */
+.modal-message::placeholder {
+  padding: 12px 16px;
+}
+
+/* Стилизация соглашения на рассылку */
+.modal-form-optional-label {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+/* Стилизация кнопки на форме */
+.modal-form-btn {
+  transform: translateX(45%);
+}
+
+/* ТЕКСТ АРЕА */
+/* Позиционирование Лейбла в текстареа */
+.modal-form-label-textarea {
+  position: absolute;
+  top: 54%;
+  left: 11%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), line-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* выезд лейбла ТЕКСТАРЕА */
+.modal-message:focus + .modal-form-label-textarea,
+.modal-message:not(:placeholder-shown) + .modal-form-label-textarea {
+  color: #2196f3;
+  cursor: pointer;
+  font-size: 12px;
+  transform: translate(9px, -30px);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Стилизация rextarea */
+.modal-message {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: pointer;
+  /* TEXTAREA при фокусе
+ (смена бордера и позиционирование коментария)*/
+}
+
+.modal-message:focus {
+  border: 1px solid #2196f3;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+/* СТИЛИЗАЦИЯ ЧЕКБОКСА */
+/* Спрятать старый из Репозитория САШИ*/
+.modal-form-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-checkbox-field {
+  margin-bottom: 30px;
+}
+
+.modal-form-optional-label-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 0.88;
+  letter-spacing: 0.01em;
+  color: #212121;
+}
+
+.modal-form-custom-checkbox {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  background-color: #ffffff;
+  color: #ffffff;
+  border: solid #afb1b8 1px;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.icon-check-modal {
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  fill: #ffffff;
+}
+
+.modal-form-checkbox:checked + .modal-form-custom-checkbox {
+  background-color: #2196f3;
+}
+
+/* Стилизация текста чекбокса */
+.modal-form-option-span {
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.03em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #757575;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.modal-form-option-span > a {
+  color: #2196f3;
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Кнопка для закрытия модального окна */
+.modal-close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  outline: none;
+  fill: #757575;
+  /* Фокус на кнопку закрытия */
+}
+
+.modal-close-btn:focus, .modal-close-btn:hover {
+  fill: #2196f3;
+}
+
+/* Кнопка закрытия */
+.modal-close-btn-svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* что бы спрятать модальное окно */
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form {
+    width: 528px;
+    height: 581px;
+  }
+  .modal-form-btn {
+    transform: translateX(60%);
+  }
+  .modal-form-option-span {
+    font-size: 14px;
+  }
+}
+
 .header {
   position: relative;
   padding-top: 16px;
@@ -525,7 +852,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 3;
     outline: none;
   }
   .menu-btn.is-open .icon-burger-close {
@@ -598,13 +925,16 @@ h1 {
     width: 47px;
     height: 4px;
     border-radius: 2px;
-    top: 52px;
+    top: 58px;
   }
   .menu-wrapper-link {
     font-size: 14px;
   }
   .menu-wrapper-address-contact {
     font-size: 12px;
+  }
+  .menu-wrapper-address-item:not(:last-child) {
+    margin-bottom: 6px;
   }
   .menu-wrapper-address-contact:hover, .menu-wrapper-address-contact:focus {
     color: #2196f3;
@@ -659,15 +989,12 @@ h1 {
     margin-right: 50px;
   }
   .menu-wrapper-address-item:not(:last-child) {
+    margin-bottom: 0;
     margin-right: 30px;
   }
   .underline::after {
     top: 46px;
   }
-}
-
-.hero {
-  background-color: blueviolet;
 }
 
 .hero-title {
@@ -681,18 +1008,113 @@ h1 {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 767px) {
+.hero {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../image/hero/hero-phone.png");
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    max-width: 767px;
-    margin-left: auto;
-    margin-right: auto;
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../image/hero/hero-phone@2x.png");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../image/hero/hero-tablet.png");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../image/hero/hero-tablet@2x.png");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+  }
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../image/hero/hero-desktop.png");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../image/hero/hero-desktop@2x.png");
+  }
+}
+
+/*Секция наши приемущества*/
+.advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .advantage-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .advantage-list-items {
+    margin: 15px;
+    flex-basis: calc((100%-60px) / 2);
+  }
+  .advantages-caption {
     text-align: center;
-    padding-top: 118px;
-    padding-bottom: 118px;
-    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../image/gallery/hero-min.jpg);
-    background-repeat: no-repeat;
-    background-clip: border-box;
-    background-size: cover;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .advantages-text {
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+  }
+  .icon {
+    background-color: #f5f4fa;
+    width: 450px;
+    height: 120px;
+    margin-bottom: 30px;
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+  .advantage-list-items:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantage {
+    width: calc(100% / 2)-30px;
+  }
+  .icon {
+    background-color: #f5f4fa;
+    width: 450px;
+    height: 120px;
+    margin-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 142px;
+    padding-right: 142px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -58,7 +58,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 3;
     outline: none;
 
     &.is-open {
@@ -138,14 +138,18 @@
     width: 47px;
     height: 4px;
     border-radius: 2px;
-    top: 52px;
+    top: 58px;
   }
   .menu-wrapper-link {
     font-size: 14px;
   }
   // для мейла и телефона стилизация
+
   .menu-wrapper-address-contact {
     font-size: 12px;
+  }
+  .menu-wrapper-address-item:not(:last-child) {
+    margin-bottom: 6px;
   }
   .menu-wrapper-address-contact {
     &:hover,
@@ -211,6 +215,7 @@
   }
   .menu-wrapper-address-item {
     &:not(:last-child) {
+      margin-bottom: 0;
       margin-right: 30px;
     }
   }

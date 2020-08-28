@@ -186,7 +186,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 3;
     outline: none;
   }
   .menu-btn.is-open .icon-burger-close {
@@ -259,13 +259,16 @@ h1 {
     width: 47px;
     height: 4px;
     border-radius: 2px;
-    top: 52px;
+    top: 58px;
   }
   .menu-wrapper-link {
     font-size: 14px;
   }
   .menu-wrapper-address-contact {
     font-size: 12px;
+  }
+  .menu-wrapper-address-item:not(:last-child) {
+    margin-bottom: 6px;
   }
   .menu-wrapper-address-contact:hover, .menu-wrapper-address-contact:focus {
     color: #2196f3;
@@ -320,6 +323,7 @@ h1 {
     margin-right: 50px;
   }
   .menu-wrapper-address-item:not(:last-child) {
+    margin-bottom: 0;
     margin-right: 30px;
   }
   .underline::after {
