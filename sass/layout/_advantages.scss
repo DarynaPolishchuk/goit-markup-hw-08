@@ -33,11 +33,9 @@
 }
 @media screen and (min-width: 768px) {
   .advantage-list {
-    width: 100%;
-  }
-  .advantage-list {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
   .advantage-list-items {
     max-width: calc((100% - 30px) / 2);
