@@ -399,7 +399,7 @@ h1 {
   }
 }
 
-.team-social-links-items {
+.team-social-links-items, .footer-social-links-items {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -408,12 +408,12 @@ h1 {
   border-radius: 50%;
 }
 
-.team-social {
+.team-social, .footer-social-links-items svg {
   width: 20px;
   height: 20px;
 }
 
-.team-social-links {
+.team-social-links, .footer-social-links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1423,4 +1423,191 @@ modal-form-input когда у того не показывается плейс
     width: 170px;
   }
 }
+
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* заголовоки в футере */
+.call-to-action {
+  font-weight: bold;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-address {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 9px;
+}
+
+.footer-social-links-items {
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+  /* ховер для соцсетей в футере */
+}
+
+.footer-social-links-items:hover, .footer-social-links-items:focus {
+  background-color: #2196f3;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-links-items svg {
+  fill: #ffffff;
+}
+
+.footer-tel,
+.footer-mail {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-block-logo > address {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.footer-block-call-to-action {
+  width: 450px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border-radius: 4px;
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.button-send {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* Ховер на кнопку Подписаться */
+  /* значек самолетика в кнопке Подписаться */
+}
+
+.button-send:hover, .button-send:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  outline: none;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-send::after {
+  display: block;
+  content: "";
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../image/icon/send.svg");
+}
+
+.footer-block-form {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Отступ в футере в адресе между елементами */
+.footer-address-li {
+  margin-bottom: 9px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-block-logo {
+    text-align: center;
+  }
+  .footer-block {
+    text-align: center;
+  }
+  .call-to-action {
+    margin-bottom: 20px;
+  }
+  .team-social-links {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-block-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+  }
+  .footer-block-logo {
+    margin-right: 165px;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .footer-block-form {
+    width: 450px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .footer-block-call-to-action {
+    width: 358px;
+  }
+  .footer-menu {
+    display: flex;
+    align-items: baseline;
+  }
+  .footer-block-container {
+    display: flex;
+    align-items: baseline;
+    margin-right: 93px;
+  }
+  .footer-block-form {
+    display: inline-flex;
+    text-align: left;
+  }
+  .footer-block-logo {
+    margin-right: 69px;
+  }
+  /*Контейнер в футере с соц сетями */
+  .footer-block:not(:last-child) {
+    /* margin-top: 72px; */
+    margin-right: 69px;
+  }
+  /* Стилизация плейсхолдера в футере */
+  .footer-block-call-to-action::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .footer-block-call-to-action:focus {
+    outline: none;
+  }
+  .footer-block-logo > address {
+    margin-bottom: 0;
+  }
+}
+
+/* Контейнер с лого и адресом */
 /*# sourceMappingURL=main.css.map */

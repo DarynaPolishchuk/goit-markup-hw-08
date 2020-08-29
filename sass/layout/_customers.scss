@@ -73,38 +73,3 @@
     width: 170px;
   }
 }
-// .customers-list > li:hover svg,
-// .customers-list > li:focus svg {
-//   fill: $accent-color;
-
-//   transition-property: fill;
-//   transition-duration: 250ms;
-//   transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
-// }
-
-// .customers-list {
-//   display: flex;
-//   justify-content: space-between;
-//   cursor: pointer;
-
-//   & > li {
-//     display: flex;
-//     width: 170px;
-//     height: 90px;
-//     border: 1px solid #afb1b8;
-//     box-sizing: border-box;
-//     border-radius: 4px;
-//     justify-content: center;
-//     align-items: center;
-//     justify-content: center;
-
-//     &:hover,
-//     &:focus {
-//       border-color: $accent-color;
-
-//       transition-property: border-color;
-//       transition-duration: 250ms;
-//       transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
-//     }
-//   }
-// }
