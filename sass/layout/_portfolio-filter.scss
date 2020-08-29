@@ -1,37 +1,37 @@
-// /* Портфолио */
+/* Портфолио */
 
-// .filter {
-//   display: flex;
-//   justify-content: center;
-//   margin-top: 93px;
-//   margin-bottom: 50px;
-// }
-// .filter > li:not(:last-child) {
-//   margin-right: 8px;
-// }
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-top: 93px;
+  margin-bottom: 50px;
+}
+.filter > li:not(:last-child) {
+  margin-right: 8px;
+}
 
-// .filter-active {
-//   width: 128px;
-//   height: 38px;
-//   font-family: $secondary-font;
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 26px;
-//   border: 0;
-//   border-radius: 4px;
-//   cursor: pointer;
-//   /*Ховер для фильтра страници портфолио*/
-//   &:hover,
-//   &:focus {
-//     background-color: $accent-color;
-//     color: $white-color;
-//     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
-//       0px 3px 1px rgba(0, 0, 0, 0.1);
-//     border-radius: 4px;
+.filter-active {
+  width: 128px;
+  height: 38px;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  /*Ховер для фильтра страници портфолио*/
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-color;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 3px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 
-//     transition-property: background-color, color, box-shadow;
-//     transition-duration: 250ms;
-//     transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
-//   }
-// }
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
