@@ -1,8 +1,7 @@
 /* галерея страници портфолио */
 .galery {
   display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 94px;
+  flex-wrap: nowrap;
   overflow: hidden;
 
   & > li {
