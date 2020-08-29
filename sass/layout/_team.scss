@@ -83,6 +83,10 @@
 }
 // ЭКРАН ДЕСКТОПА
 @media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   .team-list {
     justify-content: space-between;
   }

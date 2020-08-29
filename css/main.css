@@ -1319,6 +1319,10 @@ modal-form-input когда у того не показывается плейс
 }
 
 @media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   .team-list {
     justify-content: space-between;
   }
@@ -1341,5 +1345,82 @@ modal-form-input когда у того не показывается плейс
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers {
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.customers-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.customers-list-item:hover, .customers-list-item:focus {
+  border-color: #2196f3;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-list-item:hover svg,
+.customers-list-item:focus svg {
+  fill: #2196f3;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custumers-comany {
+  fill: #afb1b8;
+}
+
+.customers-list-item {
+  display: flex;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .customers-list-item {
+    width: 210px;
+  }
+  .customers-list-item:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .customers-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .customers-list-item:nth-child(6) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customers-list-item {
+    width: 226px;
+  }
+  .customers-list-item:nth-child(-n + 3) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers-list-item {
+    width: 170px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
