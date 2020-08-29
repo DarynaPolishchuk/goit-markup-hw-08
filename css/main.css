@@ -1064,31 +1064,24 @@ modal-form-input когда у того не показывается плейс
   padding-bottom: 60px;
 }
 
+.advantages-caption {
+  text-align: center;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.advantages-text {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
 @media screen and (max-width: 767px) {
-  .advantage-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-  .advantage-list-items {
-    margin: 15px;
-    flex-basis: calc((100%-60px) / 2);
-  }
-  .advantages-caption {
-    text-align: center;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .advantages-text {
-    text-align: left;
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: #757575;
-  }
   .icon {
     background-color: #f5f4fa;
     width: 450px;
@@ -1103,12 +1096,31 @@ modal-form-input когда у того не показывается плейс
 }
 
 @media screen and (min-width: 768px) {
-  .advantage {
-    width: calc(100% / 2)-30px;
+  .advantage-list {
+    width: 100%;
+  }
+  .advantage-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .advantage-list-items {
+    max-width: calc((100% - 30px) / 2);
+  }
+  .advantage-list-items:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .advantage-list-items:first-child {
+    margin-bottom: 30px;
+  }
+  .advantage-list-items:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .advantages-caption {
+    text-align: left;
   }
   .icon {
     background-color: #f5f4fa;
-    width: 450px;
+    width: 354px;
     height: 120px;
     margin-bottom: 30px;
     padding-top: 25px;
@@ -1116,5 +1128,102 @@ modal-form-input когда у того не показывается плейс
     padding-left: 142px;
     padding-right: 142px;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantage-list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .advantage-list-items {
+    max-width: calc((100% - 60px) / 4);
+  }
+  .icon {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .advantage-list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .advantage-list-items:not(:last-child) {
+    margin-right: 30px;
+  }
+  .icon {
+    background-color: #f5f4fa;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/*Секция Чем мы занимаемся*/
+@media screen and (max-width: 1199px) {
+  .what-we-do {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .what-we-do {
+    padding-bottom: 94px;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-bottom: 50px;
+  }
+  .what-we-do-title {
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+  }
+  .what-we-do-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .what-we-do-list > li {
+    position: relative;
+  }
+  .what-we-do-list > li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+/* Секция Наша команда*/
+.team {
+  margin-left: auto;
+  margin-right: auto;
+  background: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 /*# sourceMappingURL=main.css.map */
