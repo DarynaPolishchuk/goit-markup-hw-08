@@ -1,6 +1,6 @@
-// .header-portfolio {
-//   border-bottom: 1px solid #ececec;
-// }
+.header-portfolio {
+  border-bottom: 1px solid #ececec;
+}
 // .underline-port::after {
 //   display: block;
 //   position: absolute;
@@ -11,3 +11,6 @@
 //   border-radius: 2px;
 //   bottom: 0px;
 // }
+.accent {
+  color: $accent-color;
+}

@@ -19,6 +19,7 @@
   line-height: 1.167;
   letter-spacing: 0.02em;
 }
+
 .menu-wrapper-link {
   color: $secondary-color;
   font-style: normal;
@@ -110,9 +111,7 @@
   .menu-btn {
     display: none;
   }
-  .header-container {
-    justify-content: flex-start;
-  }
+
   .logo {
     margin-right: 80px;
   }

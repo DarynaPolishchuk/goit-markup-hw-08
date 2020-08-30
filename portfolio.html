@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/portfolio.min.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header header-portfolio">
       <div class="container header-container">
         <a href="index.html" lang="en" class="logo link"
           ><span class="logo-web">Web</span> Studio</a
@@ -38,10 +38,10 @@
         <div class="menu-wrapper" data-menu>
           <ul class="menu-wrapper-navigation-list">
             <li class="menu-wrapper-navigation-list-item">
-              <a href="" class="menu-wrapper-link link">Студия</a>
+              <a href="./index.html" class="menu-wrapper-link link">Студия</a>
             </li>
-            <li class="menu-wrapper-navigation-list-item underline-port">
-              <a href="./portfolio.html" class="menu-wrapper-link link"
+            <li class="menu-wrapper-navigation-list-item underline">
+              <a href="./portfolio.html" class="menu-wrapper-link link accent"
                 >Портфолио</a
               >
             </li>
@@ -76,18 +76,26 @@
     <main>
       <h1 hidden>Приммеры работ</h1>
       <div class="container">
-        <ul class="container filter">
-          <li><button class="filter-active">Все</button></li>
+        <ul class="filter">
+          <li><button class="filter-active active">Все</button></li>
           <li><button class="filter-active">Веб-сайты</button></li>
           <li><button class="filter-active">Приложения</button></li>
           <li><button class="filter-active">Дизайн</button></li>
           <li><button class="filter-active">Маркетинг</button></li>
         </ul>
         <ul class="container galery">
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img.jpg    1x,
@@ -102,14 +110,6 @@
                       ./image/gallery/portfolio/tablet/img@2x.jpg 2x
                     "
                     media="(min-width: 768px)"
-                    type="image/jpg"
-                  />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x.jpg 2x
-                    "
-                    media="(min-width: 480px)"
                     type="image/jpg"
                   />
                   <img
@@ -132,10 +132,18 @@
               </div>
             </a>
           </li>
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img-1.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x-1.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img-1.jpg    1x,
@@ -152,14 +160,6 @@
                     media="(min-width: 768px)"
                     type="image/jpg"
                   />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img-1.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x-1.jpg 2x
-                    "
-                    media="(min-width: 480px)"
-                    type="image/jpg"
-                  />
                   <img src="./image/gallery/img2-min.jpg" alt="Баскетболисты" />
                 </picture>
 
@@ -170,7 +170,7 @@
                 </p>
               </div>
 
-              <div class="small-container">
+              <div class="small-container disign">
                 <h3 class="type-of-services-title link">
                   Постер <span lang="en">New Orlean vs Golden Star</span>
                 </h3>
@@ -178,10 +178,18 @@
               </div>
             </a>
           </li>
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img-2.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x-2.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img-2.jpg    1x,
@@ -196,14 +204,6 @@
                       ./image/gallery/portfolio/tablet/img@2x-2.jpg 2x
                     "
                     media="(min-width: 768px)"
-                    type="image/jpg"
-                  />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img-2.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x-2.jpg 2x
-                    "
-                    media="(min-width: 480px)"
                     type="image/jpg"
                   />
                   <img
@@ -226,10 +226,18 @@
               </div></a
             >
           </li>
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img-3.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x-3.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img-3.jpg    1x,
@@ -244,14 +252,6 @@
                       ./image/gallery/portfolio/tablet/img@2x-3.jpg 2x
                     "
                     media="(min-width: 768px)"
-                    type="image/jpg"
-                  />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img-3.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x-3.jpg 2x
-                    "
-                    media="(min-width: 480px)"
                     type="image/jpg"
                   />
                   <img src="./image/gallery/img4-min.jpg" alt="Наушники" />
@@ -271,10 +271,18 @@
               </div></a
             >
           </li>
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img-4.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x-4.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img-4.jpg    1x,
@@ -289,14 +297,6 @@
                       ./image/gallery/portfolio/tablet/img@2x-4.jpg 2x
                     "
                     media="(min-width: 768px)"
-                    type="image/jpg"
-                  />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img-4.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x-4.jpg 2x
-                    "
-                    media="(min-width: 480px)"
                     type="image/jpg"
                   />
                   <img src="./image/gallery/img5-min.jpg" alt="Боксы" />
@@ -316,10 +316,18 @@
               </div></a
             >
           </li>
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img-5.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x-5.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img-5.jpg    1x,
@@ -334,14 +342,6 @@
                       ./image/gallery/portfolio/tablet/img@2x-5.jpg 2x
                     "
                     media="(min-width: 768px)"
-                    type="image/jpg"
-                  />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img-5.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x-5.jpg 2x
-                    "
-                    media="(min-width: 480px)"
                     type="image/jpg"
                   />
                   <img src="./image/gallery/img6-min.jpg" alt="Монитор" />
@@ -361,10 +361,18 @@
               </div></a
             >
           </li>
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img-6.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x-6.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img-6.jpg    1x,
@@ -379,14 +387,6 @@
                       ./image/gallery/portfolio/tablet/img@2x-6.jpg 2x
                     "
                     media="(min-width: 768px)"
-                    type="image/jpg"
-                  />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img-6.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x-6.jpg 2x
-                    "
-                    media="(min-width: 480px)"
                     type="image/jpg"
                   />
                   <img
@@ -409,10 +409,18 @@
               </div></a
             >
           </li>
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img-7.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x-7.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img-7.jpg    1x,
@@ -427,14 +435,6 @@
                       ./image/gallery/portfolio/tablet/img@2x-7.jpg 2x
                     "
                     media="(min-width: 768px)"
-                    type="image/jpg"
-                  />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img-7.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x-7.jpg 2x
-                    "
-                    media="(min-width: 480px)"
                     type="image/jpg"
                   />
 
@@ -455,10 +455,18 @@
               </div></a
             >
           </li>
-          <li>
+          <li class="galery-items">
             <a href="" class="link">
               <div class="container-about">
                 <picture>
+                  <source
+                    srcset="
+                      ./image/gallery/portfolio/phone/img-8.jpg    1x,
+                      ./image/gallery/portfolio/phone/img@2x-8.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
                   <source
                     srcset="
                       ./image/gallery/portfolio/desktop/img-8.jpg    1x,
@@ -473,14 +481,6 @@
                       ./image/gallery/portfolio/tablet/img@2x-8.jpg 2x
                     "
                     media="(min-width: 768px)"
-                    type="image/jpg"
-                  />
-                  <source
-                    srcset="
-                      ./image/gallery/portfolio/phone/img-8.jpg    1x,
-                      ./image/gallery/portfolio/phone/img@2x-8.jpg 2x
-                    "
-                    media="(min-width: 480px)"
                     type="image/jpg"
                   />
                   <img src="./image/gallery/img9-min.jpg" alt="ноутбук" />
@@ -536,7 +536,7 @@
           </div>
           <div class="footer-block">
             <h4 class="call-to-action">Присоединяйтесь</h4>
-            <ul class="team-social-links">
+            <ul class="team-social-links footer-social-links">
               <li class="footer-social-links-items">
                 <a href="" aria-label="иконка инстаграма"
                   ><svg class="team-social">

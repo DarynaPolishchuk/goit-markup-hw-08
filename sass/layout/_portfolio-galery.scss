@@ -1,16 +1,14 @@
 /* галерея страници портфолио */
 .galery {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow: hidden;
 
   & > li {
     margin-bottom: 30px;
     box-sizing: border-box;
   }
-  & > li:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
+
   & > li:hover,
   & > li:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -20,6 +18,11 @@
     transition-duration: 250ms;
     transition-timing-function: ubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* 3n
     1)3*0=0
@@ -84,5 +87,24 @@
   &:hover .type-of-services-about-text {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .galery-items {
+    width: calc(100% / 2);
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+}
+@media screen and(min-width:1200px) {
+  .galery {
+    padding-bottom: 94px;
+
+    & > li:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
   }
 }

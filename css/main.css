@@ -918,9 +918,6 @@ modal-form-input когда у того не показывается плейс
   .menu-btn {
     display: none;
   }
-  .header-container {
-    justify-content: flex-start;
-  }
   .logo {
     margin-right: 80px;
   }
@@ -1047,6 +1044,10 @@ modal-form-input когда у того не показывается плейс
   .hero {
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../image/hero/hero-phone@2x.png");
   }
+}
+
+.accent {
+  color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
