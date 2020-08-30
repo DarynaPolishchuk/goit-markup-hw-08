@@ -1,34 +1,43 @@
 .header-portfolio {
   border-bottom: 1px solid #ececec;
 }
-.underline-port::after {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 57px;
-  background-color: $accent-color;
-  width: 77px;
-  height: 4px;
-  border-radius: 2px;
-  bottom: 0px;
-}
+
 .accent {
   color: $accent-color;
 }
 @media screen and (max-width: 767px) {
+  .menu-wrapper-navigation-list-item {
+    &:first-child::after {
+      display: none;
+    }
+    &:nth-child(2)::after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-color: $accent-color;
+      width: 95px;
+      height: 4px;
+      border-radius: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+@media screen and (min-width: 768px) {
   .underline-port::after {
     display: block;
     position: absolute;
     content: "";
-    top: 140px;
-    left: 232px;
+    top: 58px;
     background-color: $accent-color;
-    width: 95px;
+    width: 78px;
     height: 4px;
     border-radius: 2px;
     bottom: 0px;
   }
-  .underline::after {
-    display: none;
+}
+@media screen and (min-width: 1200px) {
+  .underline-port::after {
+    top: 46px;
   }
 }
