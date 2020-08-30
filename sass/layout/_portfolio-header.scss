@@ -28,7 +28,7 @@
     display: block;
     position: absolute;
     content: "";
-    // top: 58px;
+    top: 141%;
     background-color: $accent-color;
     width: 78px;
     height: 4px;
@@ -36,8 +36,8 @@
     bottom: 0px;
   }
 }
-// @media screen and (min-width: 1200px) {
-//   .underline-port::after {
-//     top: 46px;
-//   }
-// }
+@media screen and (min-width: 1200px) {
+  .underline-port::after {
+    top: 240%;
+  }
+}
