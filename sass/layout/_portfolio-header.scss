@@ -1,16 +1,34 @@
 .header-portfolio {
   border-bottom: 1px solid #ececec;
 }
-// .underline-port::after {
-//   display: block;
-//   position: absolute;
-//   content: "";
-//   background-color: $accent-color;
-//   width: 77px;
-//   height: 4px;
-//   border-radius: 2px;
-//   bottom: 0px;
-// }
+.underline-port::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 57px;
+  background-color: $accent-color;
+  width: 77px;
+  height: 4px;
+  border-radius: 2px;
+  bottom: 0px;
+}
 .accent {
   color: $accent-color;
+}
+@media screen and (max-width: 767px) {
+  .underline-port::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 140px;
+    left: 232px;
+    background-color: $accent-color;
+    width: 95px;
+    height: 4px;
+    border-radius: 2px;
+    bottom: 0px;
+  }
+  .underline::after {
+    display: none;
+  }
 }
