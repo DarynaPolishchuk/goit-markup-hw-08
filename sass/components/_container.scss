@@ -3,7 +3,7 @@
   padding-left: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 480px;
     margin: 0 auto;
@@ -12,6 +12,7 @@
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {

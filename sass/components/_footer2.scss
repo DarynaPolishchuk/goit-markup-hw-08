@@ -1,0 +1,20 @@
+.footer {
+  box-sizing: border-box;
+  display: block;
+  background-color: #2f303a;
+  background-size: cover;
+  background-position: center;
+}
+.button-send-footer {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .footer .container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

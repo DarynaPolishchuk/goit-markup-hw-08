@@ -5,6 +5,9 @@
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .team-title {
   margin-bottom: 30px;
@@ -50,12 +53,14 @@
   @extend %social-link-svg;
   fill: #afb1b8;
 }
+.team-list-cards {
+  background-color: $white-color;
+}
 // ЭКРАН 480 ТЕЛЕФОН
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .team-list-cards {
     width: 450px;
     height: 482px;
-    background-color: $white-color;
   }
 }
 // ЭКРАН ПЛАНШЕТ

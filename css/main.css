@@ -379,7 +379,7 @@ h1 {
   padding-left: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 480px;
     margin: 0 auto;
@@ -389,6 +389,7 @@ h1 {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    margin: 0 auto;
   }
 }
 
@@ -1029,8 +1030,7 @@ modal-form-input когда у того не показывается плейс
   position: relative;
   max-width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -1249,6 +1249,9 @@ modal-form-input когда у того не показывается плейс
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .team-title {
@@ -1295,11 +1298,14 @@ modal-form-input когда у того не показывается плейс
   fill: #afb1b8;
 }
 
-@media screen and (min-width: 480px) {
+.team-list-cards {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
   .team-list-cards {
     width: 450px;
     height: 482px;
-    background-color: #ffffff;
   }
 }
 
@@ -1438,6 +1444,7 @@ modal-form-input когда у того не показывается плейс
 
 /* заголовоки в футере */
 .call-to-action {
+  display: block;
   font-weight: bold;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -1491,7 +1498,7 @@ modal-form-input когда у того не показывается плейс
 }
 
 .footer-block-call-to-action {
-  width: 450px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: transparent;
@@ -1578,7 +1585,7 @@ modal-form-input когда у того не показывается плейс
     padding-bottom: 60px;
   }
   .footer-block-call-to-action {
-    width: 100%;
+    width: 358px;
   }
   .footer-menu {
     display: flex;
@@ -1590,7 +1597,6 @@ modal-form-input когда у того не показывается плейс
     margin-right: 93px;
   }
   .footer-block-form {
-    display: inline-flex;
     text-align: left;
   }
   .footer-block-logo {
