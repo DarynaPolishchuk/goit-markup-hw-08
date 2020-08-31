@@ -56,10 +56,21 @@
 .team-list-cards {
   background-color: $white-color;
 }
+// экран до 480 телефона
+@media screen and (max-width: 479px) {
+  .img-team {
+    width: 100%;
+  }
+}
 // ЭКРАН 480 ТЕЛЕФОН
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
+  .team-list-cards:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
   .team-list-cards {
-    width: 450px;
+    max-width: 450px;
     height: 482px;
   }
 }
@@ -76,13 +87,10 @@
     height: 422px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .team-list-cards {
     &:not(:nth-child(even)) {
       margin-right: 30px;
-    }
-    &:not(:last-child) {
-      margin-bottom: 30px;
     }
   }
 }

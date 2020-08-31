@@ -379,7 +379,14 @@ h1 {
   padding-left: 15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
   .container {
     width: 480px;
     margin: 0 auto;
@@ -825,6 +832,7 @@ modal-form-input когда у того не показывается плейс
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .menu-wrapper-address-contact {
@@ -1028,7 +1036,7 @@ modal-form-input когда у того не показывается плейс
 
 .hero {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin: auto;
   text-align: center;
@@ -1044,10 +1052,6 @@ modal-form-input когда у того не показывается плейс
   .hero {
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url("../image/hero/hero-phone@2x.png");
   }
-}
-
-.accent {
-  color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
@@ -1302,9 +1306,21 @@ modal-form-input когда у того не показывается плейс
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .img-team {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .team-list-cards:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
   .team-list-cards {
-    width: 450px;
+    max-width: 450px;
     height: 482px;
   }
 }
@@ -1321,12 +1337,9 @@ modal-form-input когда у того не показывается плейс
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .team-list-cards:not(:nth-child(even)) {
     margin-right: 30px;
-  }
-  .team-list-cards:not(:last-child) {
-    margin-bottom: 30px;
   }
 }
 

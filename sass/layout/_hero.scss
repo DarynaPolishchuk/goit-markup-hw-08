@@ -10,7 +10,7 @@
 }
 .hero {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin: auto;
   text-align: center;
@@ -39,9 +39,9 @@
       url("../image/hero/hero-phone@2x.png");
   }
 }
-.accent {
-  color: $accent-color;
-}
+// .accent {
+//   color: $accent-color;
+// }
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(

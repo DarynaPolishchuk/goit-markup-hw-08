@@ -379,7 +379,14 @@ h1 {
   padding-left: 15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
   .container {
     width: 480px;
     margin: 0 auto;
@@ -498,6 +505,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .menu-wrapper-address-contact {
@@ -835,6 +843,9 @@ h1 {
   color: #212121;
   letter-spacing: 0.06em;
   text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .type-of-services-about {
@@ -890,9 +901,14 @@ h1 {
   opacity: 1;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .galery-items:nth-child(odd) {
     margin-right: 30px;
+  }
+  .type-of-services-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .small-container {
     padding-left: 17px;
