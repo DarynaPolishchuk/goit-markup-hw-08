@@ -37,6 +37,7 @@
 }
 .customers-list-item {
   display: flex;
+  width: 210px;
   height: 90px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
@@ -45,10 +46,14 @@
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   .customers-list-item {
-    width: 210px;
-
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  .customers-list-item {
     &:nth-child(odd) {
       margin-right: 30px;
     }
