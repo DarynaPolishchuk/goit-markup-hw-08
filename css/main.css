@@ -1102,14 +1102,19 @@ modal-form-input когда у того не показывается плейс
   color: #757575;
 }
 
+.img-advanture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+
 @media screen and (max-width: 767px) {
   .icon {
-    background-color: #f5f4fa;
-    width: 450px;
-    height: 120px;
-    margin-bottom: 30px;
-    padding-left: 190px;
-    padding-right: 190px;
+    width: 70px;
+    height: 70px;
   }
   .advantage-list-items:not(:last-child) {
     margin-bottom: 30px;
@@ -1573,7 +1578,7 @@ modal-form-input когда у того не показывается плейс
     padding-bottom: 60px;
   }
   .footer-block-call-to-action {
-    width: 358px;
+    width: 100%;
   }
   .footer-menu {
     display: flex;
