@@ -30,6 +30,7 @@
     4)3*3=9 */
 
 .type-of-services-title {
+  display: block;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -70,6 +71,7 @@
 }
 
 .small-container {
+  width: 354px;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
@@ -112,10 +114,10 @@
     text-overflow: ellipsis;
   }
 
-  .small-container {
-    padding-left: 17px;
-    padding-right: 17px;
-  }
+  // .small-container {
+  //   padding-left: 17px;
+  //   padding-right: 17px;
+  // }
 }
 // Экран десктоп
 @media screen and(min-width:1200px) {

@@ -831,6 +831,7 @@ h1 {
     3)3*2=6
     4)3*3=9 */
 .type-of-services-title {
+  display: block;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -872,6 +873,7 @@ h1 {
 }
 
 .small-container {
+  width: 354px;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
@@ -912,10 +914,6 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  .small-container {
-    padding-left: 17px;
-    padding-right: 17px;
   }
 }
 
