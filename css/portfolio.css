@@ -873,7 +873,6 @@ h1 {
 }
 
 .small-container {
-  width: 354px;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
@@ -906,6 +905,12 @@ h1 {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .small-container {
+    width: 450px;
+  }
+}
+
 @media screen and (max-width: 1199px) and (min-width: 768px) {
   .galery-items:nth-child(odd) {
     margin-right: 30px;
@@ -915,6 +920,9 @@ h1 {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .small-container {
+    width: 354px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -923,6 +931,9 @@ h1 {
   }
   .galery > li:not(:nth-child(3n)) {
     margin-right: 30px;
+  }
+  .small-container {
+    width: 370px;
   }
 }
 

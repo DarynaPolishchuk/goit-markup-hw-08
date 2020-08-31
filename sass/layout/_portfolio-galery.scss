@@ -71,7 +71,6 @@
 }
 
 .small-container {
-  width: 354px;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
@@ -93,7 +92,7 @@
     opacity: 1;
   }
 }
-
+// Экран до 480px
 @media screen and (max-width: 479px) {
   .container-about-img {
     width: 100%;
@@ -102,7 +101,12 @@
     max-width: 450px;
   }
 }
-
+// ЭКРАН 480px
+@media screen and (min-width: 480px) {
+  .small-container {
+    width: 450px;
+  }
+}
 // ЭКРАН Таблетки
 @media screen and (max-width: 1199px) and (min-width: 768px) {
   .galery-items:nth-child(odd) {
@@ -114,10 +118,9 @@
     text-overflow: ellipsis;
   }
 
-  // .small-container {
-  //   padding-left: 17px;
-  //   padding-right: 17px;
-  // }
+  .small-container {
+    width: 354px;
+  }
 }
 // Экран десктоп
 @media screen and(min-width:1200px) {
@@ -127,5 +130,8 @@
     & > li:not(:nth-child(3n)) {
       margin-right: 30px;
     }
+  }
+  .small-container {
+    width: 370px;
   }
 }
