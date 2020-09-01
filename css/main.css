@@ -807,6 +807,18 @@ modal-form-input когда у того не показывается плейс
   pointer-events: none;
 }
 
+@media screen and (max-width: 480px) {
+  .modal-form-label-textarea {
+    left: 53px;
+  }
+  .modal-form-btn {
+    text-align: center;
+    left: 50%;
+    max-width: 100px;
+    transform: translateX(75%);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal-form {
     width: 528px;
