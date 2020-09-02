@@ -372,6 +372,7 @@ h1 {
 
 .img {
   display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -890,6 +891,11 @@ h1 {
 .container-about:hover .type-of-services-about-text {
   transform: translateY(0);
   opacity: 1;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 479px) {
