@@ -899,11 +899,6 @@ h1 {
   .small-container {
     max-width: 450px;
   }
-  .type-of-services-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 }
 
 @media screen and (min-width: 480px) {
