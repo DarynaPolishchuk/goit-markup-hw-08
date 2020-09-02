@@ -88,10 +88,6 @@
     opacity: 1;
   }
 }
-.img {
-  display: block;
-  max-width: 100%;
-}
 
 // Экран до 480px
 @media screen and (max-width: 479px) {
@@ -125,6 +121,7 @@
   }
 
   .small-container {
+    display: block;
     width: 354px;
   }
 }
