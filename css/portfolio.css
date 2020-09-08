@@ -903,7 +903,8 @@ img {
     max-width: 450px;
   }
   .type-of-services-about-text {
-    padding: 22px;
+    font-size: 16px;
+    padding: 10px;
   }
 }
 
