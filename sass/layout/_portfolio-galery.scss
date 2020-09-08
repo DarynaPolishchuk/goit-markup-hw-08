@@ -97,11 +97,10 @@
   .small-container {
     max-width: 450px;
   }
-  // .type-of-services-title {
-  //   white-space: nowrap;
-  //   overflow: hidden;
-  //   text-overflow: ellipsis;
-  // }
+  .type-of-services-about-text {
+    font-size: 16px;
+    padding-top: 10px;
+  }
 }
 // ЭКРАН 480px
 @media screen and (min-width: 480px) {

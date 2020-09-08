@@ -902,6 +902,10 @@ img {
   .small-container {
     max-width: 450px;
   }
+  .type-of-services-about-text {
+    font-size: 16px;
+    padding-top: 10px;
+  }
 }
 
 @media screen and (min-width: 480px) {
